@@ -1,6 +1,6 @@
 <?php
 
-define('BASEURL', 'http://localhost:8080/web-project/ni-test/public');
+define('BASEURL', 'http://localhost/job/Fanny/ni_test/public');
 
 //db
 define('DB_HOST', 'localhost');
