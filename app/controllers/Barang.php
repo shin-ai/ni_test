@@ -5,10 +5,11 @@ class Barang extends Controller
     public function index($page = 1)
     {
         $limit = 1;
-        if (isset($_GET['page'])) {
-            $page = $_GET['page'];
-        }
-
+        $url = $_SERVER['REQUEST_URI'];
+        $query_string = parse_url($url, PHP_URL_QUERY);
+        parse_str($query_string, $params);
+        $page = isset($params['page']) ? $params['page'] : $page;
+        
         $offset = ($page - 1) * $limit;
 
         $data['judul'] = 'Daftar Barang';
